@@ -119,6 +119,7 @@ const ResponsiveComponentCustomer = () => {
 
 const TableComponentCustomerUser = ({ userData }) => {
   const [document, setDocuments] = useState(null);
+  const navigate = useNavigate();
   const fetchDocument = async () => {
     // console.log(2);
     // console.log(location);
