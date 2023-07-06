@@ -12,11 +12,13 @@ import {
 import { db } from "../firebase";
 import moment from "moment";
 import { AuthContext } from "../utils/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const PendRequests = () => {
   const isAuth = useContext(AuthContext);
   const [userData, setuserData] = useState(null);
   const [document, setDocuments] = useState([]);
+  const navigate = useNavigate();
 
   const fetchUserDocument = async () => {
     if (isAuth && !userData) {

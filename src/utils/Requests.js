@@ -12,6 +12,7 @@ import {
 import { db } from "../firebase";
 import moment from "moment";
 import { AuthContext } from "../utils/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const Requests = () => {
   return (
@@ -91,106 +92,7 @@ const DoneRequests = () => {
     // console.log(userData);
   }, [userData]);
 
-  // const confirm = async (transaction) => {
-  //   // console.log("C");
-  //   // console.log(transaction);
-  //   if (window.confirm("Are you sure you want to Confirm?")) {
-  //     try {
-  //       const q = query(
-  //         collection(db, "transactions"),
-  //         where("uid", "==", transaction["uid"])
-  //       );
-
-  //       const querySnapshot = await getDocs(q);
-  //       if (querySnapshot.empty) {
-  //         alert("Error! Confirmation not sent. Data not found.");
-  //       } else {
-  //         querySnapshot.forEach((doc) => {
-  //           const transactionRef = doc.ref;
-  //           updateDoc(transactionRef, { confirmed: "confirmed" })
-  //             .then(() => {
-  //               alert("Request Confirmed!");
-  //               window.location.reload();
-  //               // navigate("/dashboardscreen");
-  //               // location.reload();
-  //             })
-  //             .catch((error) => {
-  //               console.log("Error updating document:", error);
-  //               alert("Error! Confirmation not sent.");
-  //             });
-  //         });
-  //       }
-  //     } catch (error) {
-  //       console.log("Error fetching document from Firebase:", error);
-  //       alert("Error! Confirmation not send");
-  //     }
-  //   }
-  // };
-
-  // const reject = async (transaction) => {
-  //   if (transaction["confirmed"] !== "rejected") {
-  //     if (window.confirm("Do you really wish to Cancel?")) {
-  //       try {
-  //         const q = query(
-  //           collection(db, "transactions"),
-  //           where("uid", "==", transaction["uid"])
-  //         );
-
-  //         const q2 = query(
-  //           collection(db, "availability"),
-  //           where("uid", "==", transaction["uid"])
-  //         );
-
-  //         const querySnapshot = await getDocs(q);
-  //         const querySnapshot2 = await getDocs(q2);
-  //         let flag = false;
-
-  //         querySnapshot2.forEach((doc) => {
-  //           const transactionRef2 = doc.ref;
-  //           updateDoc(transactionRef2, {
-  //             accepted: false,
-  //           })
-  //             .then(() => {
-  //               // alert("Request sent!");
-  //               // navigate("/portal");
-  //               // navigate("/dashboardscreen");
-  //               // location.reload();
-  //               flag = true;
-  //             })
-  //             .catch((error) => {
-  //               console.log("Error updating document:", error);
-  //               alert("Error! Confirmation not sent.");
-  //             });
-  //         });
-
-  //         if (querySnapshot.empty || flag) {
-  //           alert("Error! Rejection not sent. Data not found.");
-  //         } else {
-  //           querySnapshot.forEach((doc) => {
-  //             const transactionRef = doc.ref;
-  //             updateDoc(transactionRef, { confirmed: "rejected" })
-  //               .then(() => {
-  //                 alert("Request successfully rejected!");
-  //                 window.location.reload();
-  //                 // navigate("/dashboardscreen");
-  //                 // location.reload();
-  //               })
-  //               .catch((error) => {
-  //                 console.log("Error updating document:", error);
-  //                 alert("Error! Confirmation not sent.");
-  //               });
-  //           });
-  //         }
-  //       } catch (error) {
-  //         console.log("Error fetching document from Firebase:", error);
-  //         alert("Error! Confirmation not send");
-  //       }
-  //     }
-  //   } else {
-  //     alert("Already rejected!");
-  //   }
-  // };
-
+  
   return (
     <div className="">
       <h1 className="text-transparent font-bold ml-2 text-center mt-6 mb-6">
@@ -356,6 +258,7 @@ const PendRequests = () => {
   const isAuth = useContext(AuthContext);
   const [userData, setuserData] = useState(null);
   const [document, setDocuments] = useState([]);
+  const navigate = useNavigate();
 
   const fetchUserDocument = async () => {
     if (isAuth && !userData) {
