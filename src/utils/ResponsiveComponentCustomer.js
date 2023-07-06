@@ -177,7 +177,7 @@ const TableComponentCustomerUser = ({ userData }) => {
               .then(() => {
                 alert("Upload Deleted!");
                 // window.location.reload();
-                navigate("/dashboardScreen");
+                navigate("/availabilitycard");
                 // location.reload();
               })
               .catch((error) => {
