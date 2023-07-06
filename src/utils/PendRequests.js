@@ -125,7 +125,7 @@ const PendRequests = () => {
                 .then(() => {
                   alert("Request successfully rejected!");
                   // window.location.reload();
-                  navigate("/dashboardScreen");
+                  navigate("/dashboard");
                   // location.reload();
                 })
                 .catch((error) => {
