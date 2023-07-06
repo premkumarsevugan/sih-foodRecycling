@@ -436,8 +436,8 @@ const PendRequests = () => {
             updateDoc(transactionRef, { confirmed: "confirmed" })
               .then(() => {
                 alert("Request Confirmed!");
-                window.location.reload();
-                // navigate("/dashboardscreen");
+                // window.location.reload();
+                navigate("/dashboardScreen");
                 // location.reload();
               })
               .catch((error) => {

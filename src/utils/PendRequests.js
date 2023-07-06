@@ -122,8 +122,8 @@ const PendRequests = () => {
               updateDoc(transactionRef, { confirmed: "rejected" })
                 .then(() => {
                   alert("Request successfully rejected!");
-                  window.location.reload();
-                  // navigate("/dashboardscreen");
+                  // window.location.reload();
+                  navigate("/dashboardScreen");
                   // location.reload();
                 })
                 .catch((error) => {
