@@ -340,7 +340,7 @@ const PendRequests = () => {
               .then(() => {
                 alert("Request Confirmed!");
                 // window.location.reload();
-                navigate("/dashboardScreen");
+                navigate("/dashboard");
                 // location.reload();
               })
               .catch((error) => {
@@ -400,8 +400,8 @@ const PendRequests = () => {
               updateDoc(transactionRef, { confirmed: "rejected" })
                 .then(() => {
                   alert("Request successfully rejected!");
-                  window.location.reload();
-                  // navigate("/dashboardscreen");
+                  // window.location.reload();
+                  navigate("/dashboard");
                   // location.reload();
                 })
                 .catch((error) => {
