@@ -175,8 +175,8 @@ const TableComponentCustomerUser = ({ userData }) => {
             updateDoc(transactionRef, { accepted: true })
               .then(() => {
                 alert("Upload Deleted!");
-                window.location.reload();
-                // navigate("/dashboardscreen");
+                // window.location.reload();
+                navigate("/dashboardScreen");
                 // location.reload();
               })
               .catch((error) => {
