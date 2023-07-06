@@ -119,7 +119,7 @@ const ResponsiveComponentCustomer = () => {
 
 const TableComponentCustomerUser = ({ userData }) => {
   const [document, setDocuments] = useState(null);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const fetchDocument = async () => {
     // console.log(2);
     // console.log(location);
@@ -176,8 +176,8 @@ const TableComponentCustomerUser = ({ userData }) => {
             updateDoc(transactionRef, { accepted: true })
               .then(() => {
                 alert("Upload Deleted!");
-                window.location.reload();
-                // navigate("/availabilitycard");
+                navigate("/portal");
+                // window.location.reload();
                 // location.reload();
               })
               .catch((error) => {
