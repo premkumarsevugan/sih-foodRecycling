@@ -107,6 +107,7 @@ const DoneRequests = () => {
           // console.log(sourceLat, sourceLng, destinationLat, destinationLat);
 
           const url = `https://www.google.com/maps/dir/${sourceLat},${sourceLng}/${destinationLat},${destinationLng}`;
+          alert("Use phone for accurate location tracking!");
           window.open(url, "_blank");
         },
         (error) => {

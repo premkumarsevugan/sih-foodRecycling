@@ -93,12 +93,11 @@ const FormComponent = () => {
           alert("Availability Uploaded!");
           navigate("/portal");
         } catch (error) {
-          console.log("Error fetching document from Firebase:", error);
+          // console.log("Error  document from Firebase:", error);
+          alert("An error occured! Please Try again!");
+          // navigate("/portal");
         }
       }
-
-      // Perform form submission logic here
-      // You can access the input values using the state variables
 
       // Reset the form
       setAddress("");

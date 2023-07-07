@@ -99,7 +99,7 @@ const SignUpComponent = () => {
     }
     if (
       window.confirm(
-        "Your current Location will be set as your default location"
+        "Your current Location will be set as your default location. Use a mobile phone for accurate location!"
       )
     ) {
       try {
