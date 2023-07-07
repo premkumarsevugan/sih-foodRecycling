@@ -306,11 +306,11 @@ const PendRequests = () => {
                 </tr>
               ))}
           </tbody>
-          {document && document.length === 0 && (
-            <div className=" text-lg text-center p-8">No Recent Requests</div>
-          )}
         </table>
       </div>
+          {document && document.length === 0 && (
+            <div className="text-lg text-center p-8">No Recent Requests</div>
+          )}
     </div>
   );
 };

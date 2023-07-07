@@ -267,11 +267,11 @@ const DoneRequests = () => {
                 </tr>
               ))}
           </tbody>
+        </table>
+      </div>
           {document && document.length === 0 && (
             <div className=" text-xl text-center p-6 mt-6">No Data to Show</div>
           )}
-        </table>
-      </div>
     </div>
   );
 };
