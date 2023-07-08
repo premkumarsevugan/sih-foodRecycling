@@ -127,10 +127,10 @@ const HowWeWork = () => {
             <img
               src={appPic}
               alt="Logo"
-              className="h-48 flex justify-center ml-2"
+              className="h-58 flex justify-center ml-2 p-2"
             />
           </div>
-          <div className="text-3xl font-bold mt-4 mb-4 text-orange-500">
+          <div className="text-3xl font-bold mt-9 mb-4 text-orange-500">
             Send ur Request
           </div>
           <p className="text-sm ">
