@@ -4,7 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import TestimonialSlider from "../utils/Testimonies";
 import ContactFooter from "../utils/Footer";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import food from "../images/food.svg";
+import food from "../images/Food.jpg";
 import delivery from "../images/delivery.svg";
 import appPic from "../images/app.png";
 
@@ -124,7 +124,11 @@ const HowWeWork = () => {
       <div className="flex justify-evenly space-x-4">
         <div className="flex flex-col first-letter:items-center justify-center p-4 bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg cursor-pointer h-auto w-1/3">
           <div className="text-6xl text-orange-500">
-            <img src={appPic} alt="Logo" className="h-48 flex justify-center" />
+            <img
+              src={appPic}
+              alt="Logo"
+              className="h-48 flex justify-center ml-2"
+            />
           </div>
           <div className="text-3xl font-bold mt-4 mb-4 text-orange-500">
             Send ur Request
@@ -142,8 +146,8 @@ const HowWeWork = () => {
             Find the right Request and Availability you need and confirm
           </p>
 
-          <div className="text-6xl text-orange-500 mt-6 flex justify-center">
-            <img src={food} alt="Logo" className="h-18 w-18" />
+          <div className=" flex justify-center">
+            <img src={food} alt="Logo" className="h-18 w-18 p-14 rounded" />
           </div>
         </div>
 
@@ -152,7 +156,7 @@ const HowWeWork = () => {
             <img
               src={delivery}
               alt="Logo"
-              className="h-18 w-18 flex justify-center"
+              className="h-18 w-18 flex justify-center p-4 ml-2"
             />
           </div>
           <div className="text-2xl font-bold mb-4 text-orange-500">
