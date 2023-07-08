@@ -23,9 +23,23 @@ const LoginScreen = () => {
     setShowPassword(!showPassword);
   };
 
+  const isValidEmail = (input) => {
+    const emailRegex = /^[^\s@]+@gmail\.com$/;
+    return emailRegex.test(input);
+  };
+
   const handleLogin = async () => {
+    if (email === "" || password === "") {
+      alert("Please fill in all the required fields.");
+      return;
+    }
+    if (!isValidEmail(email)) {
+      alert("Not a valid Email!");
+      return;
+    }
     try {
       const auth = getAuth();
+
       await signInWithEmailAndPassword(auth, email, password);
       navigate("/");
     } catch (error) {
