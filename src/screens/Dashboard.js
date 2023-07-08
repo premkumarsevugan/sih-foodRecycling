@@ -76,9 +76,7 @@ const ResponsiveComponent = ({ userData }) => {
 					<span className="text-orange-500 text-8xl">Save Food</span>
 				</h1>
 				<p className="text-sm mt-4">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-					eleifend pretium turpis, ac tincidunt ex condimentum id.
-					Fusce eleifend suscipit ante, eu iaculis nisl eleifend at.
+				FoodSaver is dedicated to reducing food waste and ensuring that no one goes hungry. We believe that every bit of food can make a difference, and our mission is to connect surplus food with organizations and individuals who need it the most.
 				</p>
 			</div>
 

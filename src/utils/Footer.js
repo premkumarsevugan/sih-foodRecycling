@@ -16,7 +16,11 @@ const ContactFooter = () => {
 							</h4>
 						</div>
 
-						<p className="text-black mb-2 ml-4">
+						<p className="text-black mb-2 ml-4 text-sm">
+							@powered by 
+						</p>
+
+						<p className="text-black ml-4">
 							For any inquiries or support, please feel free to
 							reach out to us.
 						</p>
