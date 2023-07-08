@@ -30,7 +30,10 @@ const ResponsiveComponent = () => {
           <span className="text-orange-500 ">Save Food</span>
         </h1>
         <p className="text-sm mt-12">
-        FoodSaver is dedicated to reducing food waste and ensuring that no one goes hungry. We believe that every bit of food can make a difference, and our mission is to connect surplus food with organizations and individuals who need it the most. 
+          FoodSaver is dedicated to reducing food waste and ensuring that the
+          right people get the right help at the right time. We believe that
+          every bit of food can make a difference, and our mission is to connect
+          surplus food with organizations and individuals who need it the most.
         </p>
       </div>
       <div className="w-full md:w-2/3 p-8">
@@ -48,7 +51,6 @@ const ImageSlider = () => {
     "https://media.gettyimages.com/id/535555349/photo/group-of-happy-indian-children.jpg?s=612x612&w=0&k=20&c=1zJBdY4-3UfonM955AGb9kHQRcjGQLM6FAuRG_9JGMI=",
     "https://media.gettyimages.com/id/941788480/photo/portrait-of-girl-kid-having-mid-day-meal-in-indian-school.jpg?s=612x612&w=0&k=20&c=tdMRbWtA9rtYSE_6EpXpSl5E4d4xdvqK7egdYd_Q_MM=",
     "https://media.gettyimages.com/id/1295068990/photo/senior-male-friends-having-fun-at-park.jpg?s=612x612&w=0&k=20&c=wKyody-7mgfht5NDonhuDXlN_Z2NnOrwHOlD9JqHdV4=",
-
   ];
 
   return (
@@ -114,28 +116,32 @@ const HowWeWork = () => {
     <div className="text-center px-8 py-8 mt-4">
       <div className="flex items-center justify-center mb-4">
         <h4 className="text-3xl font-bold mb-4">
-          <span className="text-black-500">
-            How
-            </span> {" "}
-            <span className="text-orange-500">
-            We Work
-            </span>
-          </h4>
+          <span className="text-black-500">How</span>{" "}
+          <span className="text-orange-500">We Work</span>
+        </h4>
       </div>
 
       <div className="flex justify-evenly space-x-4">
         <div className="flex flex-col first-letter:items-center justify-center p-4 bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg cursor-pointer h-auto w-1/3">
           <div className="text-6xl text-orange-500">
-            <img src={appPic} alt="Logo" className="h-48 ml-8 flex justify-center" />
+            <img
+              src={appPic}
+              alt="Logo"
+              className="h-48 flex justify-center ml-16"
+            />
           </div>
-          <div className="text-3xl font-bold mt-4 mb-4 text-orange-500">Send ur Request</div>
+          <div className="text-3xl font-bold mt-4 mb-4 text-orange-500">
+            Send ur Request
+          </div>
           <p className="text-sm ">
             Upload any Request or any Availability you have on our portal
           </p>
         </div>
 
         <div className="flex flex-col first-letter:items-center justify-center p-4 bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg cursor-pointer h-auto w-1/3">
-          <div className="text-3xl font-bold mt-4 mb-4 text-orange-500">Accept an Availability</div>
+          <div className="text-3xl font-bold mt-4 mb-4 text-orange-500">
+            Accept an Availability
+          </div>
           <p className="text-sm ">
             Find the right Request and Availability you need and confirm
           </p>
@@ -147,9 +153,15 @@ const HowWeWork = () => {
 
         <div className="flex flex-col first-letter:items-center justify-center p-4 bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg cursor-pointer h-auto w-1/3">
           <div className="text-6xl text-orange-500">
-            <img src={delivery} alt="Logo" className="-18 w-18 flex justify-center" />
+            <img
+              src={delivery}
+              alt="Logo"
+              className="h-18 w-18 flex justify-center ml-16"
+            />
           </div>
-          <div className="text-2xl font-bold mb-4 text-orange-500">Pick Up your Request</div>
+          <div className="text-2xl font-bold mb-4 text-orange-500">
+            Pick Up your Request
+          </div>
           <p className="text-sm whitespace-normal mb-4 ">
             Confirm and pick up your food with directions
           </p>

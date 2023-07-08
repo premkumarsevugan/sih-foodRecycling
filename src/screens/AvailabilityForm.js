@@ -125,13 +125,14 @@ const FormComponent = () => {
                 id="foodType"
                 className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-orange-500"
                 value={foodType}
+                placeholder="Enter Food Type"
                 onChange={(e) => setFoodType(e.target.value)}
               />
             </div>
 
             <div className="mb-4">
               <label htmlFor="quantity" className="block mb-2 text-gray-800">
-                Quantity
+                Quantity / kg
               </label>
               <input
                 type="number"
@@ -177,6 +178,7 @@ const FormComponent = () => {
                 id="address"
                 className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-orange-500"
                 value={address}
+                placeholder="Enter pickup address"
                 onChange={(e) => setAddress(e.target.value)}
               />
             </div>
@@ -190,6 +192,7 @@ const FormComponent = () => {
                 id="description"
                 className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-orange-500"
                 value={description}
+                placeholder="Give some description"
                 onChange={(e) => setDescription(e.target.value)}
               />
             </div>

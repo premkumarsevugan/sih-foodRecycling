@@ -21,7 +21,7 @@ function App() {
     return <div>Loading...</div>;
   }
   return (
-    <div className="h-full w-full" style={{ width: "100%" }}>
+    <div className="h-full w-full " style={{ width: "100%" }}>
       <AuthProvider>
         <BrowserRouter>
           <Routes>
