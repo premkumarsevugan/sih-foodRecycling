@@ -113,7 +113,7 @@ const FormComponent = () => {
   return (
     <div className="bg-gray-100 h-screen">
       <div className="flex justify-center items-center p-4">
-        <div className="bg-white p-8 rounded shadow-lg mt-12">
+        <div className="bg-white p-8 rounded shadow-lg mt-5">
           <h2 className="text-2xl font-bold mb-4">Post an Availability</h2>
           <form onSubmit={handleSubmit} className="container">
             <div className="mb-4">

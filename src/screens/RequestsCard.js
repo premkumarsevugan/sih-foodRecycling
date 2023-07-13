@@ -22,7 +22,7 @@ const RequestsCard = () => {
 		<div className="">
 			<Navbar />
 			<ResponsiveComponentProvider />
-			<div className="absolute bottom-0 left-0 w-full">
+			<div className="w-full">
 				<ContactFooter />
 			</div>
 		</div>
@@ -289,6 +289,7 @@ const TableComponentProviderUser = ({ userData }) => {
 						))}
 				</tbody>
 			</table>
+			
 			{document && document.length === 0 && (
 				<div className=" flex items-center justify-center p-8">
 					<h2 className="text-2xl">No data</h2>
@@ -350,9 +351,9 @@ const TableComponentProviderAll = ({ userData }) => {
 	};
 
 	return (
-		<div className="">
-			<table className="min-w-full bg-white border border-gray-300 p-6">
-				<thead>
+		<div className="min-w-full">
+			<table className="hidden md:block mx-auto bg-whitep-6">
+				<thead className="">
 					<tr>
 						<th className="px-6 py-3 bg-gray-100 border-b text-left">
 							Organization Name
@@ -424,6 +425,136 @@ const TableComponentProviderAll = ({ userData }) => {
 						))}
 				</tbody>
 			</table>
+			<div className="md:hidden pt-20 lg:pt-[120px] pb-10 lg:pb-20 bg-[#F3F4F6] w-full">
+        <div class="">
+          <div class="flex max-w-2xl mx-auto flex-wrap">
+            {document &&
+              document.length !== 0 &&
+              document.map((item, index) => (
+                <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+                  <div class="bg-white rounded-lg overflow-hidden mb-10">
+
+                    <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-left">
+
+                      <h1
+                        class="
+                        font-semibold
+                        text-dark text-sm
+                        sm:text-md
+                        md:text-md
+                        lg:text-md
+                        xl:text-md
+                        2xl:text-md
+                        mb-4
+                        block
+                        hover:text-primary"
+                      >
+                        <strong>Organization Name :</strong> <br /> &nbsp; &nbsp; {item.orgName}
+                      </h1>
+                      <h1
+                        class="
+                        font-semibold
+                        text-dark text-sm
+                        sm:text-md
+                        md:text-md
+                        lg:text-md
+                        xl:text-md
+                        2xl:text-md
+                        mb-4
+                        block
+                        hover:text-primary"
+                      >
+                        <strong>Contact Number : </strong><br /> &nbsp; &nbsp; {item.phoneNumber}
+                      </h1>
+                      <h1
+                        class="
+                        font-semibold
+                        text-dark text-sm
+                        sm:text-md
+                        md:text-md
+                        lg:text-md
+                        xl:text-md
+                        2xl:text-md
+                        mb-4
+                        block
+                        hover:text-primary"
+                      >
+                        <strong>People :</strong> <br /> &nbsp; &nbsp;  {item.people}
+                      </h1>
+                      
+                      <h1
+                        class="
+                        font-semibold
+                        text-dark text-sm
+                        sm:text-md
+                        md:text-md
+                        lg:text-md
+                        xl:text-md
+                        2xl:text-md
+                        mb-4
+                        block
+                        hover:text-primary"
+                      >
+                        <strong>Deadline : </strong><br /> &nbsp; &nbsp;    {moment(item.deadline.toDate()).format("MMMM Do YYYY h:mm a")}
+                      </h1><h1
+                        class="
+                        font-semibold
+                        text-dark text-sm
+                        sm:text-md
+                        md:text-md
+                        lg:text-md
+                        xl:text-md
+                        2xl:text-md
+                        mb-4
+                        block
+                        hover:text-primary"
+                      >
+                        <strong>Address :</strong><br /> &nbsp; &nbsp;  {item.address}
+                      </h1>
+                      <h1
+                        class="
+                        font-semibold
+                        text-dark text-sm
+                        sm:text-md
+                        md:text-md
+                        lg:text-md
+                        xl:text-md
+                        2xl:text-md
+                        mb-4
+                        block
+                        hover:text-primary"
+                      >
+                        <strong>Description :</strong><br /> &nbsp; &nbsp; {item.description}
+                      </h1>
+
+                      <div className="w-full flex justify-center items-center">
+                      <button
+                        class="
+                     inline-block
+                     py-2
+                     px-7
+                     bg-orange-500
+                     border border-[#E5E7EB]
+                     rounded-full
+                     text-base text-white
+                     font-medium
+                     hover:border-primary hover:bg-primary hover:bg-orange-700
+                     transition
+                     mt-3
+                     "
+                     onClick={help}
+                      >
+                        Help
+                      </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+          </div>
+        </div>
+
+      </div>					
 			{document && document.length === 0 && (
 				<div className=" flex items-center justify-center p-8">
 					<h2 className="text-2xl">No data</h2>

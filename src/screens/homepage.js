@@ -23,25 +23,46 @@ const Homepage = () => {
 
 const ResponsiveComponent = () => {
   return (
-    <div className="flex flex-wrap items-center px-4">
-      <div className="w-full md:w-1/3 p-8 ">
-        <h1 className="text-transparent font-bold ml-2 mr-4 lg:text-8xl sm:text-6xl ">
-          <span className="text-black ">We help</span> <br />
-          <span className="text-orange-500 ">Save Food</span>
-        </h1>
-        <p className="text-sm mt-12">
-          FoodSaver is dedicated to reducing food waste and ensuring that the
-          right people get the right help at the right time. We believe that
-          every bit of food can make a difference, and our mission is to connect
-          surplus food with organizations and individuals who need it the most.
-        </p>
-      </div>
-      <div className="w-full md:w-2/3 p-8">
-        <div className="">
+    <section class="text-gray-600 body-font px-4">
+      <div class="container mx-auto flex px-5 py-5 sm:py-24 md:flex-row flex-col items-center w-full justify-center">
+        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
           <ImageSlider />
         </div>
+        <div class="max-w-2xl lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+          <h1 class="title-font sm:text-7xl text-5xl mb-4 font-bold text-gray-900">We help
+            <br />
+            <span className="text-orange-500">Save Food  </span>  </h1>
+          <p class="mb-8 leading-relaxed">FoodSaver is dedicated to reducing food waste and ensuring that the
+            right people get the right help at the right time. We believe that
+            every bit of food can make a difference, and our mission is to connect
+            surplus food with organizations and individuals who need it the most.</p>
+          <div class="flex justify-center">
+            <button class="inline-flex text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded text-lg">Help Us</button>
+
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+    /* // <div className="flex flex-wrap items-center px-4">
+    //   <div className="w-full md:w-1/3 p-8 ">
+    //     <h1 className="text-transparent font-bold ml-2 mr-4 lg:text-8xl sm:text-6xl ">
+    //       <span className="text-black ">We help</span> <br />
+    //       <span className="text-orange-500 ">Save Food</span>
+    //     </h1>
+    //     <p className="text-sm mt-12">
+    //       FoodSaver is dedicated to reducing food waste and ensuring that the
+    //       right people get the right help at the right time. We believe that
+    //       every bit of food can make a difference, and our mission is to connect
+    //       surplus food with organizations and individuals who need it the most.
+    //     </p>
+    //   </div>
+    //   <div className="w-full md:w-2/3 p-8">
+    //     <div className="">
+    //       <ImageSlider />
+    //     </div>
+    //   </div>
+    // </div> */
+
   );
 };
 
@@ -102,7 +123,7 @@ const ServicesComponent = () => {
         <h4 className="text-3xl font-bold mb-4 text-black mx-4">Our</h4>
         <h4 className="text-3xl font-bold mb-4 text-orange-500">Services</h4>
       </div>
-      <div className="flex justify-evenly space-x-4">
+      <div className="flex flex-wrap gap-3 justify-evenly space-x-4">
         <ServiceTile icon="📝" title="Post Requests" />
         <ServiceTile icon="🤝" title="Connecting" />
         <ServiceTile icon="🚚" title="Pickup" />
@@ -114,58 +135,117 @@ const ServicesComponent = () => {
 const HowWeWork = () => {
   return (
     <div className="text-center px-8 py-8 mt-4">
-      <div className="flex items-center justify-center mb-4">
-        <h4 className="text-3xl font-bold mb-4">
-          <span className="text-black-500">How</span>{" "}
-          <span className="text-orange-500">We Work</span>
-        </h4>
-      </div>
 
-      <div className="flex justify-evenly space-x-4">
-        <div className="flex flex-col first-letter:items-center justify-center p-4 bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg cursor-pointer h-auto w-1/3">
-          <div className="text-6xl text-orange-500">
-            <img
-              src={appPic}
-              alt="Logo"
-              className="h-58 flex justify-center ml-2 p-2"
-            />
-          </div>
-          <div className="text-3xl font-bold mt-9 mb-4 text-orange-500">
-            Send ur Request
-          </div>
-          <p className="text-sm ">
-            Upload any Request or any Availability you have on our portal
-          </p>
-        </div>
-
-        <div className="flex flex-col first-letter:items-center justify-center p-4 bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg cursor-pointer h-auto w-1/3">
-          <div className="text-3xl font-bold mt-4 mb-4 text-orange-500">
-            Accept an Availability
-          </div>
-          <p className="text-sm ">
-            Find the right Request and Availability you need and confirm
-          </p>
-
-          <div className=" flex justify-center">
-            <img src={food} alt="Logo" className="h-18 w-18 p-14 rounded" />
-          </div>
-        </div>
-
-        <div className="flex flex-col first-letter:items-center justify-center p-4 bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg cursor-pointer h-auto w-1/3">
-          <div className="text-6xl text-orange-500">
-            <img
-              src={delivery}
-              alt="Logo"
-              className="h-18 w-18 flex justify-center p-4 ml-2"
-            />
-          </div>
-          <div className="text-2xl font-bold mb-4 text-orange-500">
-            Pick Up your Request
-          </div>
-          <p className="text-sm whitespace-normal mb-4 ">
-            Confirm and pick up your food with directions
-          </p>
-        </div>
+      <h2 class="flex flex-row flex-nowrap items-center my-8">
+        <span class="flex-grow block border-t border-orange-600" aria-hidden="true" role="presentation"></span>
+        <span class="flex-none block mx-4   px-4 py-2.5 leading-none font-bold uppercase bg-orange-600 text-white text-3xl">
+          How We Work
+        </span>
+        <span class="flex-grow block border-t border-orange-600" aria-hidden="true" role="presentation"></span>
+      </h2>
+      <div class="flex flex-wrap -mx-4 mt-20">
+         <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+            <div class="bg-white rounded-lg overflow-hidden mb-10 shadow-lg">
+               <img
+                  src={ appPic }
+                  alt="image "
+                  class="min-h-[400px]"
+                  />
+               <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                  <h3>
+                     <h2
+                        class="
+                        font-semibold
+                        text-dark text-xl
+                        sm:text-[22px]
+                        md:text-xl
+                        lg:text-[22px]
+                        xl:text-xl
+                        2xl:text-[22px]
+                        mb-4
+                        block
+                        hover:text-primary
+                        text-orange-500
+                        "
+                        >
+                     Send Your Request
+                     </h2>
+                  </h3>
+                  <p class="text-base text-body-color leading-relaxed mb-7">
+                    Upload any Request or any Availability you have on our portal
+                  </p>
+                  
+               </div>
+            </div>
+         </div>
+         <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+            <div class="bg-white rounded-lg overflow-hidden mb-10 shadow-lg">
+               <img
+                  src={food}
+                  alt="image"
+                  class="min-h-[400px]"
+                  />
+               <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                  <h3>
+                     <h2
+                        class="
+                        font-semibold
+                        text-dark text-xl
+                        sm:text-[22px]
+                        md:text-xl
+                        lg:text-[22px]
+                        xl:text-xl
+                        2xl:text-[22px]
+                        mb-4
+                        block
+                        hover:text-primary
+                        text-orange-500
+                        "
+                        >
+                     Accept an Availablity
+                     </h2>
+                  </h3>
+                  <p class="text-base text-body-color leading-relaxed mb-7">
+                  Find the right Request and Availability you need and confirm
+                  </p>
+                  
+               </div>
+            </div>
+         </div>
+         <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+            <div class="bg-white rounded-lg overflow-hidden mb-10 shadow-lg">
+               <img
+                  src={delivery}
+                  alt="image"
+                  class="min-h-[400px]"
+                  />
+               <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                  <h3>
+                     <h2
+                        class="
+                        font-semibold
+                        text-dark text-xl
+                        sm:text-[22px]
+                        md:text-xl
+                        lg:text-[22px]
+                        xl:text-xl
+                        2xl:text-[22px]
+                        mb-4
+                        block
+                        hover:text-primary
+                        text-orange-500
+                        "
+                        >
+                     Pick Up Your Request
+                     </h2>
+                  </h3>
+                  <p class="text-base text-body-color leading-relaxed mb-7">
+                  Confirm and pick up your food with directions
+                  </p>
+                  
+               </div>
+            </div>
+         </div>
       </div>
     </div>
   );

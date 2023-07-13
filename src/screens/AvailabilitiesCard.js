@@ -8,7 +8,7 @@ const AvailabilitiesCard = () => {
     <div className="">
       <Navbar />
       <ResponsiveComponentCustomer />
-      <div className="absolute bottom-0 left-0 w-full">
+      <div className="w-full">
 				<ContactFooter />
 			</div>
     </div>

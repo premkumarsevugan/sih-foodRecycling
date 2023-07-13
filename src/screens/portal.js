@@ -9,7 +9,7 @@ const PortalScreen = () => {
     <div>
       <Navbar />
       <ResponsiveComponent />
-      <div className="absolute bottom-0 left-0 w-full">
+      <div className="bottom-0 left-0 w-full">
         <ContactFooter />
       </div>
     </div>
@@ -41,10 +41,10 @@ const ResponsiveComponent = () => {
         </div>
 
         <div className="w-full flex-col items-center md:w-2/3 p-4 mt-12">
-          <div className="container flex items-center justify-evenly">
+          <div className="container flex flex-wrap items-center justify-evenly">
             <div className="flex flex-col items-center">
               <h1 className="text-transparent font-bold ml-2 mb-4">
-                <span className="text-black text-4xl">View Availabilities</span>
+                <span className="text-black text-xl">View Availabilities</span>
               </h1>
               <button
                 className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-6 rounded mb-12"
@@ -55,7 +55,7 @@ const ResponsiveComponent = () => {
             </div>
             <div className="flex flex-col items-center">
               <h1 className="text-transparent font-bold ml-2 mb-4">
-                <span className="text-black text-4xl">View Requests</span>
+                <span className="text-black text-xl">View Requests</span>
               </h1>
               <button
                 className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-5 rounded mb-12"

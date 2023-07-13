@@ -38,7 +38,7 @@ const Dashboard = () => {
 			<Navbar />
 			{!userData && <LoadingText />}
 			{userData && <ResponsiveComponent userData={userData} />}
-			<div className="absolute bottom-0 left-0 w-full">
+			<div className="w-full">
 				<ContactFooter />
 			</div>
 		</div>
@@ -114,10 +114,10 @@ const ResponsiveComponent = ({ userData }) => {
 					)}
 
 					{userData["userType"] === "Providers" && (
-						<div className="container flex items-center justify-evenly">
+						<div className="container flex flex-wrap items-center justify-evenly">
 							<div className="flex flex-col items-center">
 								<h1 className="text-transparent font-bold ml-2 mb-4">
-									<span className="text-black text-4xl">
+									<span className="text-black text-xl">
 										Post an Availability
 									</span>
 								</h1>
@@ -130,7 +130,7 @@ const ResponsiveComponent = ({ userData }) => {
 							</div>
 							<div className="flex flex-col items-center">
 								<h1 className="text-transparent font-bold ml-2 mb-4">
-									<span className="text-black text-4xl">
+									<span className="text-black text-xl">
 										Go to DashBoard
 									</span>
 								</h1>
